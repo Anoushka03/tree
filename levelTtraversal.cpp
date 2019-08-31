@@ -7,6 +7,7 @@ struct tree
      struct tree* left;
      struct tree * right;
 };
+//creating a new node in the tree
 struct tree * push( int key)
 {
      struct tree *newnode=(struct tree*)malloc(sizeof(struct tree*));
@@ -14,6 +15,7 @@ struct tree * push( int key)
      newnode->left=newnode->right=NULL;
     return newnode;
 }
+//level order traversal of the tree
 void print(tree* head)
 {
     queue<struct tree*> q;
