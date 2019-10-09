@@ -1,0 +1,17 @@
+class Solution {
+public:
+    vector<int> arr;
+    void inorder(TreeNode * root)
+    {
+        if(!root)
+            return ;
+        inorder(root->left);
+        arr.push_back(root->data);
+        inorder(root->right);
+    }
+    vector<int> inorderTraversal(TreeNode* root) 
+    {
+          inorder(root);
+          return arr;
+    }
+};
